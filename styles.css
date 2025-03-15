@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  /* Mood Selector Buttons */
+  .mood-selector {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .mood-btn {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+ 
+.mood-btn:hover {
+    animation: bounce 0.5s;
+  }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+  .mood-btn:hover {
+    transform: scale(1.1);
+  }
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+ 
+  
+  .dark-mode .mood-history li {
+    background-color: #444;
+  }
+  
+  /* Mood-Specific Colors */
+  [data-mood="happy"] { background-color: #FFD700; }
+  [data-mood="sad"] { background-color: #87CEEB; }
+  [data-mood="excited"] { background-color: #FF4500; }
+  [data-mood="calm"] { background-color: #98FB98; }
+  
+  /* Mood History Section */
+  .mood-history {
+    margin-top: 40px;
+  }
+  
+  #history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #history-list li {
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .mood-selector {
+      flex-direction: column;
+    }
+  
+    .mood-btn {
+      width: 100%;
+    }
+  }
